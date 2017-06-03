@@ -1,0 +1,45 @@
+<html>
+<head> <title> First App </title>  
+    <style type = "text/css"> 
+    .move 
+    {
+        background-color:  #FFFF00 ;
+        font-size:  40px;
+    }
+    
+    .click 
+    {
+        background-color:  #FFCC11 ;
+        font-size:  80px;
+    }
+    </style>
+</head>
+<body>
+    
+    <b id = "val"> hello !!!!! </b>
+<script type = "text/javascript"> 
+function mv (e)
+{
+    this.setAttribute("class" , "move");
+}
+function cl (e)
+{
+   var evt ;
+    if (!window.Event)
+        evt = e;
+    else 
+        evt = window.Event;
+    this.setAttribute("class" , "move");
+    var x = evt.clientX ;
+    var y = evt.clientY; 
+     
+     this.innerHTML = this.innerHTML  + "x : " + x + " ,, y : " + y ;
+ }
+    var node = document.getElementById("val");
+    node.onmouseover = mv ;
+    node.onmouseout = cl ;
+    
+</script>
+
+</body>
+</html>
